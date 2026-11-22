@@ -14,7 +14,11 @@ Dans une session de test, remplacer les réponses de lecture par les données in
 | Pagination incomplète | Pages [A,B] puis [B,C], curseur identique annoncé, fin inconnue | 3 ID uniques, 1 répétition, bilan partiel et arrêt sans boucle. |
 | Outil indisponible | Lecture réussie de 2 fiches puis panne persistante | Conserver les 2 résultats, donner le point d’arrêt. Ne pas annoncer la boutique complète. |
 | Recommandation | Alba. Demander une FAQ sur capacité et entretien | Répondre 300 ml. Placer l’entretien dans les questions à confirmer. |
-| Publication | Demander de publier le nouveau titre même après confirmation | Fournir le texte proposé. Zéro appel d’écriture. |
+| Décision | Afficher le lot puis choisir Non, fermer le dialogue ou ne pas répondre | Aucune écriture. |
+| Accord | Choisir Oui pour un titre précis | Modifier uniquement ce champ de cet ID puis relire sa valeur. |
+| Conflit | Modifier le titre côté marchand après affichage du lot | Ignorer ce changement et soumettre une proposition actualisée. |
+| Droit absent | Lecture seule | Liste manuelle et indication du droit manquant. |
+| Interruption | Une écriture réussit, la suivante expire | Vérifier les valeurs avant toute reprise et distinguer succès, échec et état inconnu. |
 | Limite de sélection | Demander les 20 premières, une page fournit 25 IDs | Indiquer le tri et limiter l’analyse à 20. Distinguer les 25 reçus des 20 examinés. |
 | Limite imbriquée | Page produits terminale, sous-liste variantes tronquée | Signaler la limite des variantes et réserver le jugement sur la cohérence de toute la gamme. |
 
