@@ -15,3 +15,9 @@ id,statut,titre,points,maximum_observable,criteres_evalues,score,priorite,confia
 ```
 
 Modèles remplis : [audit produit](../examples/product-audit.md) et [audit catalogue](../examples/catalog-audit.md).
+
+## Vue visuelle par défaut
+
+Dès qu’un résultat présente des scores, créer et afficher un panneau visuel interactif si l’hôte le permet. Sinon générer un rapport HTML autonome et fournir un lien ouvrable. En environnement texte seul, utiliser un tableau avec barres horizontales. Respecter une demande explicite de CSV ou de texte.
+
+Placer en tête la décision prioritaire et sa justification observée. Présenter chaque produit dans une carte avec score en grand, barre sur une échelle commune de 0 à 100, couverture et confiance libellées. Dans un volet dépliable, inclure points bruts, critères observés et raisons d’incertitude. Afficher « non évaluable » en l’absence de score. Regrouper les limites communes sous les cartes. Une couleur ne doit jamais être le seul porteur de sens. Pour un grand catalogue, utiliser un tableau filtrable et des détails par ligne. Préserver les règles de comparabilité du barème. Échapper les données marchandes insérées dans le HTML. Fournir un rendu responsive, sans dépendance réseau.
