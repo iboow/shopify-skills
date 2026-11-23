@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revue des corrections Shopify</title>
+<style>
+*{box-sizing:border-box}body,dialog{font:16px/1.5 system-ui;color:#18352d}body{background:#eef3ef}dialog{width:min(720px,94vw);max-height:90vh;border:1px solid #b9cabe;border-radius:18px;padding:clamp(16px,4vw,32px)}dialog::backdrop{background:#17352d66}h1{font:2rem Georgia;margin:.3em 0}h2{font-size:1.1rem;margin:1.2em 0 .4em}label,.manual{display:block;border-top:1px solid #ccd8ce;padding:12px 0}input{width:1.2em;height:1.2em;vertical-align:middle}small{display:block;margin-left:1.9rem;color:#43594e}footer{position:sticky;bottom:0;background:white;padding:12px 0}button{padding:10px 14px;border-radius:7px;border:1px solid #9fb5a8;cursor:pointer}button.primary{background:#24523f;color:white}button:disabled{opacity:.5;cursor:default}textarea{width:100%;padding:8px;font:inherit}
+</style>
+<body><button id="open">Revoir les corrections</button><dialog aria-labelledby="title">
+<header>Shopify Conversion Doctor</header><h1 id="title">Modifications à faire</h1>
+<p id="review" data-review="DEMO-ALBA">Atelier fictif · Démonstration</p>
+<section><h2>Alba · P01</h2>
+<label><input type="checkbox" value="A1"> Titre produit · P2<small>Actuel : Alba<br>Proposé : Tasse Alba en grès émaillé – 300 ml<br>Motif : identifier le produit dès le titre.</small></label>
+<label><input type="checkbox" value="A2"> Titre SEO · P2<small>Actuel : vide<br>Proposé : Tasse Alba 300 ml en grès émaillé<br>Motif : préciser le type de produit et sa capacité.</small></label>
+<div class="manual"><strong>À vérifier · Texte alternatif</strong><br>Inspecter la photo avant de proposer une description fidèle.</div></section>
+<footer><button id="cancel">Annuler</button> <button class="primary" id="prepare" disabled>Préparer ma sélection (0)</button>
+<div id="handoff" hidden><label for="message">Transmets ce message dans le chat pour appliquer ton choix.</label><textarea id="message" readonly></textarea><button id="copy">Copier le message</button></div></footer></dialog>
+<script>
+const get=id=>document.getElementById(id);
+const dialog=document.querySelector('dialog');
+const boxes=[...dialog.querySelectorAll('input[type=checkbox]:not(:disabled)')];
+const selected=()=>boxes.filter(box=>box.checked).map(box=>box.value);
+function refresh(){const n=selected().length;get('prepare').disabled=!n;get('prepare').textContent='Préparer ma sélection ('+n+')';get('handoff').hidden=true;get('message').value='';get('copy').textContent='Copier le message'}
+dialog.addEventListener('change',refresh);
+dialog.addEventListener('close',()=>{boxes.forEach(box=>box.checked=false);refresh()});
+get('open').onclick=()=>dialog.showModal();get('cancel').onclick=()=>dialog.close();
+get('prepare').onclick=()=>{get('message').value='Pour la revue '+get('review').dataset.review+', applique uniquement les corrections '+selected().join(', ')+'.';get('handoff').hidden=false};
+get('copy').onclick=async()=>{try{await navigator.clipboard.writeText(get('message').value);get('copy').textContent='Message copié'}catch{get('message').focus();get('message').select()}};
+dialog.showModal();
+</script></body></html>
