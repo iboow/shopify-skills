@@ -1,6 +1,6 @@
 # Shopify Conversion Doctor
 
-Connectez votre boutique Shopify à une IA compatible disposant de la lecture des produits. Ce dossier fournit ensuite la méthode pour auditer vos fiches, choisir lesquelles retravailler et préparer de nouveaux textes. Il fonctionne entièrement en Markdown. Chaque audit se termine par les modifications proposées. Si votre connecteur permet l’écriture, le choix Oui lance leur application et Non clôt l’audit. Une interface sans dialogue recueille votre réponse dans le chat.
+Connectez votre boutique Shopify à une IA compatible disposant de la lecture des produits. Ce dossier fournit ensuite la méthode pour auditer vos fiches, choisir lesquelles retravailler et préparer de nouveaux textes. Il fonctionne entièrement en Markdown. Chaque audit se termine par les modifications proposées. Cochez les corrections souhaitées, puis validez votre sélection. Les lignes à vérifier restent visibles. Si le dialogue ne peut pas transmettre votre choix, copiez la sélection dans le chat. L’application nécessite un connecteur autorisé en écriture.
 
 ## Démarrer
 
