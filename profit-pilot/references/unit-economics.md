@@ -1,0 +1,7 @@
+# Du SKU à la commande
+
+À la ligne, associer variante, quantité, prix réalisé après remise, remboursement et coût historique. Montrer séparément prix catalogue et prix moyen net réalisé. Agréger les montants d’abord ; calculer ensuite les taux sur les sommes. Comparer les variantes à mix, période et couverture explicites. Classer en euros de contribution totale pour l’impact période et en contribution par unité pour une décision de prix. Une marge élevée en pourcentage peut représenter peu d’euros.
+
+À la commande, appliquer une seule fois transport, préparation forfaitaire et fixe de paiement par transaction réelle. Si l’attribution est documentée uniquement au niveau commande, y laisser la publicité. Pour allouer le port aux produits, privilégier un coût de colis observé ou le poids expédié ; pour une commission proportionnelle, utiliser l’assiette facturée. Préciser la règle, les cas sans poids/avec assiette nulle et attribuer l’écart d’arrondi de manière reproductible. Contrôler que les montants alloués totalisent exactement la facture. Sans clé défendable, donner la marge des produits et la contribution de la commande.
+
+Isoler le CA sans COGS et les variantes non classables. Pour un coût actuel utilisé en remplacement, obtenir l’hypothèse explicite du marchand et étiqueter l’estimation. Identifier les déficits par montant négatif, le poids du transport par logistique/revenu et la sensibilité aux remises par simulation. Pour chaque priorité, citer le SKU, le poste mesuré et le changement à tester.
